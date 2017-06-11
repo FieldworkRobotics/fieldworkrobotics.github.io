@@ -1,0 +1,34 @@
+---
+layout: splash
+author_profile: true
+title: "Fieldwork Robotics Ltd"
+
+header:
+  image: fieldwork_robotics_poster.jpg
+
+intro:
+  - excerpt: 'The GummiArm is an open source, bio-inspired robotic arm for research, education, and innovation. You can build your own GummiArm, or order it all ready to be deployed to your laboratory and start using it with no delay.'
+
+feature_row1:
+  - image_path: gummiarm_bioinspired.jpg
+    title: "Simply replicable"
+    excerpt: 'Replicate and extend research experiments across artificial intelligence, robotics and human motor control. Integrate the soft arm on your commercial platform and open new markets. Or use the GummiArm for demonstrating concepts accross the whole range of STEAM subjects in higher education and high school.'
+    url: "/simplyReplicable/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row id="feature_row1" type="left" %}
+
+{% include base_path %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
